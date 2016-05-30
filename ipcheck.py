@@ -1,23 +1,24 @@
 
 import random
 import sys
+import gevent
 
 def subnet_calc():
     try:
         print "\n"
         
-        #Checking IP address validity
+        #Get IP address and check if valid
         while True:
             ip_address = raw_input("Enter an IP address: ")
             
-            #Checking octets            
+            #evaluate each octet
             a = ip_address.split('.')
                         
             if (len(a) == 4) and (1 <= int(a[0]) <= 223) and (int(a[0]) != 127) and (int(a[0]) != 169 or int(a[1]) != 254) and (0 <= int(a[1]) <= 255 and 0 <= int(a[2]) <= 255 and 0 <= int(a[3]) <= 255):
                 break
             
             else:
-                print "\nThe IP address is INVALID! Please retry!\n"
+                print "\nINVALID IP address. Please retry!\n"
                 continue
         
         masks = [255, 254, 252, 248, 240, 224, 192, 128, 0]
