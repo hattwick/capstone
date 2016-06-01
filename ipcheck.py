@@ -1,7 +1,6 @@
 
 import random
 import sys
-import gevent
 
 def subnet_calc():
     try:
@@ -38,7 +37,7 @@ def subnet_calc():
                 continue
          
 
-        #Algorithm for subnet identification, based on IP and Subnet Mask
+        #Subnet identification
         
         #Convert mask to binary string
         mask_octets_padded = []
