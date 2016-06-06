@@ -33,7 +33,9 @@ def subnet_calc():
                 break
             
             else:
-                print("\nThe subnet mask is INVALID! One sample is 255.255.255.0 for a common /24 subnet.  Please retry!\n")
+                prompt = ("\nThe subnet mask is INVALID! One sample is 255.255.255.0 for a common /24 subnet.")
+                prompt += ("\nPlease ensure you have four octets in your subnet mask.")
+                print(prompt)
                 continue
          
 
