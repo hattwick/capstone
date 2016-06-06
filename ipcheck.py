@@ -17,7 +17,7 @@ def subnet_calc():
                 break
             
             else:
-                print ("\nINVALID IP address. Please retry!\n")
+                print ("\nINVALID IP address. Please check your values and retry!\n")
                 continue
         
         masks = [255, 254, 252, 248, 240, 224, 192, 128, 0]
@@ -33,7 +33,7 @@ def subnet_calc():
                 break
             
             else:
-                print("\nThe subnet mask is INVALID! Please retry!\n")
+                print("\nThe subnet mask is INVALID! One sample is 255.255.255.0 for a common /24 subnet.  Please retry!\n")
                 continue
          
 
