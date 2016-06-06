@@ -82,9 +82,7 @@ def subnet_calc():
         
         wildcard_mask = ".".join(wildcard_octets)
         #print wildcard_mask
-        
-        ############# Application #1 - Part #3 #############
-        
+
         #Convert IP to binary string
         ip_octets_padded = []
         ip_octets_decimal = ip_address.split(".")
