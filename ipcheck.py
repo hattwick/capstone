@@ -4,11 +4,11 @@ import sys
 
 def subnet_calc():
     try:
-        print "\n"
+        print("\n")
         
         #Get IP address and check if valid
         while True:
-            ip_address = raw_input("Enter an IP address: ")
+            ip_address = input("Enter an IP address: ")
             
             #evaluate each octet
             a = ip_address.split('.')
@@ -17,14 +17,14 @@ def subnet_calc():
                 break
             
             else:
-                print "\nINVALID IP address. Please retry!\n"
+                print ("\nINVALID IP address. Please retry!\n")
                 continue
         
         masks = [255, 254, 252, 248, 240, 224, 192, 128, 0]
         
         #Validate subnet mask
         while True:
-            subnet_mask = raw_input("Enter a subnet mask: ")
+            subnet_mask = input("Enter a subnet mask: ")
             
             #Check octets
             b = subnet_mask.split('.')
@@ -33,7 +33,7 @@ def subnet_calc():
                 break
             
             else:
-                print "\nThe subnet mask is INVALID! Please retry!\n"
+                print("\nThe subnet mask is INVALID! Please retry!\n")
                 continue
          
 
@@ -145,19 +145,19 @@ def subnet_calc():
         #print broadcast_address
         
         #Results for selected IP/mask
-        print "\n"
-        print "Network address is: %s" % network_address
-        print "Broadcast address is: %s" % broadcast_address
-        print "Number of valid hosts per subnet: %s" % no_of_hosts
-        print "Wildcard mask: %s" % wildcard_mask
-        print "Mask bits: %s" % no_of_ones
-        print "\n"
+        print("\n")
+        print("Network address is: %s" % network_address)
+        print("Broadcast address is: %s" % broadcast_address)
+        print("Number of valid hosts per subnet: %s" % no_of_hosts)
+        print("Wildcard mask: %s" % wildcard_mask)
+        print("Mask bits: %s" % no_of_ones)
+        print("\n")
         
         ############# Application #1 - Part #4 #############
         
         #Generation of random IP in subnet
         while True:
-            generate = raw_input("Generate random ip address from subnet? (y/n)")
+            generate = input("Generate random ip address from subnet? (y/n)")
             
             if generate == "y":
                 generated_ip = []
@@ -180,16 +180,16 @@ def subnet_calc():
                 y_iaddr = ".".join(generated_ip)
                 #print y_iaddr
                 
-                print "Random IP address is: %s" % y_iaddr
-                print "\n"
+                print("Random IP address is: %s" % y_iaddr)
+                print("\n")
                 continue
                 
             else:
-                print "Ok, bye!\n"
+                print("Thank you for checking the address!\n")
                 break
         
     except KeyboardInterrupt:
-        print "\n\nProgram aborted by user. Exiting...\n"
+        print("\n\nProgram aborted by user. Exiting...\n")
         sys.exit()
         
 #Calling the function
