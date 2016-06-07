@@ -109,7 +109,7 @@ def subnet_calc():
         #Obtain the network address and broadcast address from the binary strings obtained above
         
         network_address_binary = binary_ip[:(no_of_ones)] + "0" * no_of_zeros
-        #print network_address_binary
+        print("Binary address %s" % network_address_binary)
         
         broadcast_address_binary = binary_ip[:(no_of_ones)] + "1" * no_of_zeros
         #print broadcast_address_binary
