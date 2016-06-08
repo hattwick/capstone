@@ -66,7 +66,7 @@ def subnet_calc():
         #print mask_octets_padded
         
         decimal_mask = "".join(mask_octets_padded)
-        #print decimal_mask   #Example: for 255.255.255.0 => 11111111111111111111111100000000
+        print(decimal_mask)  #Example: for 255.255.255.0 => 11111111111111111111111100000000
         
         #Counting host bits in the mask and calculating number of hosts/subnet
         no_of_zeros = decimal_mask.count("0")
