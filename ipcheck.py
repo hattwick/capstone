@@ -7,7 +7,7 @@ def subnet_calc():
     try:
         print("\n")
         now = datetime.datetime.now()
-        print(now.strftime("%Y-%m-%d %H:%M"))
+        print('Starting Subnet Validator at ' + now.strftime("%Y-%m-%d %H:%M"))
 
         #Get IP address and check if valid
         while True:
